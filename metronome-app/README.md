@@ -5,7 +5,7 @@
 - node.js
 
 ## instructions
-- cd ./metroname-app npm install
+- cd ./metronome-app npm install
 - npm start
 
 ![Alt text](./metronomepic.png?raw=true "Title")
