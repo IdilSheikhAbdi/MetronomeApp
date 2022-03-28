@@ -1,24 +1,53 @@
-import React, {useState} from "react";
-import classnames from 'classnames';
-
+import React, { useState } from "react";
+import classnames from "classnames";
 
 const BeatController = (props) => {
-  const[active, setActive]  = useState();
+  const [buttonSelected, setButtonSelected] = useState(1);
   const changeBeat = (event) => {
-    
-    console.log(event.target.value)
+    setButtonSelected(parseInt(event.target.value))
     props.setBeatCount(parseInt(event.target.value));
     props.isPlaying(false);
-    clearTimeout(props.timer);
+    clearInterval(props.timer)
   };
-  
 
   return (
-    <div className='beat-buttons'>
-      <button className={classnames('button-2', active)} value={1} onClick={changeBeat}>1</button>
-      <button className="button-2" value={2}  onClick={changeBeat}>2</button>
-      <button className="button-2" value={3} onClick={changeBeat}>3</button>
-      <button className="button-2" value={4} onClick={changeBeat}>4</button>
+    <div className="beat-buttons">
+      <button
+        className="button-2"
+        style={{ backgroundColor: buttonSelected !== 1 ? "pink" : "#F082AC" }}
+        value={1}
+        onClick={changeBeat}
+      >
+        1
+      </button>
+      <button
+        className="button-2"
+        style={{ backgroundColor: buttonSelected !== 2 ? "pink" : "#F082AC" }}
+        value={2}
+        onClick={changeBeat}
+      >
+        2
+      </button>
+      <button
+        className="button-2"
+        style={{ backgroundColor: buttonSelected !== 3 ? "pink" : "#F082AC" }}
+        value={2}
+        onClick={changeBeat}
+        value={3}
+        onClick={changeBeat}
+      >
+        3
+      </button>
+      <button
+        className="button-2"
+        style={{ backgroundColor: buttonSelected !== 4 ? "pink" : "#F082AC" }}
+        value={2}
+        onClick={changeBeat}
+        value={4}
+        onClick={changeBeat}
+      >
+        4
+      </button>
     </div>
   );
 };

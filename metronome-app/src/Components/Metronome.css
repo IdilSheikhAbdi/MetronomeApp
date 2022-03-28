@@ -39,6 +39,7 @@
     font-size: 50px;
     font-weight: 100px;
     color:#EA4C89;
+    margin:5%;
 
 
     
@@ -49,12 +50,16 @@
   .bpm-value{
     font-family: 'Times New Roman', serif;    
     padding-top: 10px;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 100px;
     color:#F082AC;
     justify-content: center;
+    margin-bottom: 10px
 
   }
+  .bpm-value > h3 {
+
+  } 
   .play-bpm-buttons{
     flex-direction: column;
     justify-content: center;
@@ -66,6 +71,7 @@
   }
   .box-container > input {
     display: inline-block;
+    margin: 10px
   }
   
   input {
@@ -141,9 +147,4 @@
   width: 50px;
   border-radius: 50%;
   border: 1px solid #F082AC;
-  background-color: pink;
-  
-}
-.button-2:hover{
-  background-color: #F082AC;
 }

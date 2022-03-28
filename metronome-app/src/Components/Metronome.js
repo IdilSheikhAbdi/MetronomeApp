@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PlayMetronome from "./PlayMetronome";
-import Scrollbar from "./Scrollbar";
+import BpmBar from "./BpmBar";
 import TapTempo from "./TapTempo";
 import metronomeClick from "../Sounds/click1.wav";
 import metronomeClick2 from "../Sounds/mechanicalSound2.wav";
@@ -18,8 +18,6 @@ const Metronome = () => {
 
   const startMetronome = (playing, bpm) => {
     clearInterval(timer);
-    console.log("isplaying", playing);
-    console.log("bpm:", bpm);
     if (playing === true) {
       setTimer(
         setInterval(() => {
@@ -30,12 +28,6 @@ const Metronome = () => {
   };
 
   const playSound = () => {
-    console.log(
-      "beat count: ",
-      beatCount,
-      "beat mod beatCount",
-      beat % beatCount
-    );
     if (beatCount > 1 && beat % beatCount === 0) {
       sound2.play();
     } else {
@@ -43,11 +35,11 @@ const Metronome = () => {
     }
     beat += 1;
   };
-  return (
 
+  return (
     <div className="box-container">
       <h3> Metronome </h3>
-      <Scrollbar
+      <BpmBar
         bpm={bpm}
         changeBpmValue={setBpm}
         playing={playing}
@@ -55,18 +47,18 @@ const Metronome = () => {
       />
       <div className="bpm-value">{bpm} BPM</div>
       <PlayMetronome
-          bpm={bpm}
-          playing={playing}
-          isPlaying={isPlaying}
-          startMetronome={startMetronome}/>
-       <TapTempo
+        bpm={bpm}
+        playing={playing}
+        isPlaying={isPlaying}
+        startMetronome={startMetronome}
+      />
+      <TapTempo
         bpm={bpm}
         changeBpmValue={setBpm}
         startMetronome={startMetronome}
         playing={playing}
         playSound={playSound}
       />
-      
 
       <BeatController
         setBeatCount={setBeatCount}
