@@ -1,0 +1,6 @@
+metronome-app/node_modules
+metronome-app/package-lock.json
+/.DS_Store
+metronome-app/.DS_Store
+metronome-app/public/.DS_Store
+metronome-app/src/.DS_Store
