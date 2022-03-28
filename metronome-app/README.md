@@ -1,11 +1,12 @@
 # MetronomeApp
 
-prerequisite:
+## prerequisites:
 - google chrome
-- node.js 
+- node.js
 
-## cd ./metroname-app npm install
-## npm start
+## instructions
+- cd ./metroname-app npm install
+- npm start
 
 ![Alt text](./metronomepic.png?raw=true "Title")
 
@@ -16,4 +17,4 @@ prerequisite:
 - tap tempo 
 - beat count 
 
-note: press start to hear beat count changes 
+### note: press start to hear beat count changes 
