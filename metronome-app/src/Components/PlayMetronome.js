@@ -1,7 +1,4 @@
 import React from "react";
-import "./PlayMetronome.css";
-import play from "../Images/icons8-play-90.png"
-import pause from "../Images/icons8-pause-90.png"
 
 const PlayMetronome = (props) => {
   

@@ -1,5 +1,4 @@
 import React from "react";
-import "./TapTempo.css";
 const TapTempo = (props) => {
   let firstTap = true;
   let startTime = null;
@@ -29,7 +28,7 @@ const TapTempo = (props) => {
   };
   return (
     <button className="button-1" onClick={tempoHandler}>
-      TAP TEMPO
+      TAP TWICE TEMPO
     </button>
   );
 };

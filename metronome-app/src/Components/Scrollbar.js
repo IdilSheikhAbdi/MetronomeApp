@@ -1,5 +1,4 @@
 import React from "react";
-import "./Scrollbar.css";
 
 const Scrollbar = (props) => {
   const onChangeHandler = (event) => {
